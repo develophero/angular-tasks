@@ -1,3 +1,9 @@
-<p>
-  task-edit works!
-</p>
+<div *ngIf="task">
+  <div class="input-wrapper">
+    <input type="text" class="form-control" [(ngModel)]="editingContent" focusOn>
+  </div>
+  <div class="buttons-wrapper">
+    <button class="btn btn-primary" (click)="saveTaskClicked()" [style.opacity]="editingContent ? 1 : 0.6">Save</button>
+    <button class="btn btn-default" (click)="cancelClicked()">Cancel</button>
+  </div>
+</div>

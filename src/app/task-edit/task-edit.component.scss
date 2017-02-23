@@ -1,0 +1,9 @@
+.buttons-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+
+  .btn:first-child {
+    margin-right: 1rem;
+  }
+}
