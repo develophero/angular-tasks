@@ -35,7 +35,19 @@ export class TaskService {
   getById(id: number) {
     // A "cheat" method for now - we get all the tasks again and just return the one
     // with that id. Note that without modifications this won't work with new tasks you've created!
-    // TODO: Implement
+    return new Observable<Task>((observer) => {
+      this.getTasks().subscribe((tasks) => {
+        let foundTask;
+        for (let task of tasks) {
+          if (task.id === id) {
+            foundTask = task;
+            break;
+          }
+        }
+        observer.next(foundTask);
+        observer.complete();
+      })
+    });
   }
 
 }
