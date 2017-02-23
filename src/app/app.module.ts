@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { FocusOnDirective } from './shared/focus-on.directive';
+import {TaskService} from "./shared/task.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { FocusOnDirective } from './shared/focus-on.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    TaskService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

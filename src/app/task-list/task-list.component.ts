@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TaskService} from "../shared/task.service";
 
 interface Task {
   id: number,
@@ -14,23 +15,16 @@ interface Task {
 export class TaskListComponent implements OnInit {
 
   newTask: Task;
-  tasks: Task[] = [
-    {
-      "id": 1,
-      "content": "Learn about components",
-      "isDone": false
-    },
-    {
-      "id": 2,
-      "content": "Learn about services",
-      "isDone": false
-    }
-  ];
+  tasks: Task[] = [];
 
-  constructor() { }
+  constructor(
+    public taskService: TaskService
+  ) { }
 
   ngOnInit() {
-
+    this.taskService.getTasks().subscribe((tasks) => {
+      this.tasks = tasks;
+    });
   }
 
   taskClicked(task: Task) {
