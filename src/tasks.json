@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "content": "Learn about components",
+    "isDone": false
+  },
+  {
+    "id": 2,
+    "content": "Learn about services",
+    "isDone": false
+  },
+  {
+    "id": 3,
+    "content": "Learn about directives",
+    "isDone": false
+  },
+  {
+    "id": 4,
+    "content": "Learn about routing",
+    "isDone": false
+  },
+  {
+    "id": 5,
+    "content": "Deploy my app",
+    "isDone": false
+  }
+]

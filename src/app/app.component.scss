@@ -1,0 +1,19 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #4285f4;
+  border: 0 !important;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  .navbar-brand {
+    color: white;
+  }
+}
+
+.master-content-container {
+  padding-top: 3rem;
+  .content-container {
+    padding: 1rem 2rem 2rem 2rem;
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,0.1);
+    background: white;
+  }
+}
