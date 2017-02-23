@@ -23,7 +23,7 @@ export class TaskService {
         observer.next(this.tasksCache);
         observer.complete();
       } else {
-        this.http.get('/tasks.json').map(res => res.json()).subscribe((tasks) => {
+        this.http.get('/assets/tasks.json').map(res => res.json()).subscribe((tasks) => {
           this.tasksCache = tasks;
           observer.next(this.tasksCache);
           observer.complete();
