@@ -26,4 +26,11 @@
       </li>
     </ul>
   </div>
+  <div class="bottom-wrapper">
+    <div class="input-wrapper" *ngIf="newTask">
+      <input type="text" class="form-control" [(ngModel)]="newTask.content">
+    </div>
+    <button class="btn btn-primary new-task-button" (click)="newTaskClicked()" *ngIf="!newTask">+ New Task</button>
+    <button class="btn btn-primary new-task-button" (click)="saveTaskClicked()" *ngIf="newTask" [style.opacity]="newTask.content ? 1 : 0.6">Save</button>
+  </div>
 </div>

@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
 
 interface Task {
   id: number,
   content: string,
   isDone: boolean
 }
-
 
 @Component({
   selector: 'app-task-list',
@@ -51,5 +49,19 @@ export class TaskListComponent implements OnInit {
     });
   }
 
+  newTaskClicked() {
+    this.newTask = {
+      id: -1,
+      content: '',
+      isDone: false
+    }
+  }
+
+  saveTaskClicked() {
+    if (this.newTask.content) {
+      this.tasks.push(this.newTask);
+      this.newTask = null;
+    }
+  }
 
 }
