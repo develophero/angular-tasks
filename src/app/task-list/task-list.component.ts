@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TaskService} from "../shared/task.service";
-
-interface Task {
-  id: number,
-  content: string,
-  isDone: boolean
-}
+import {Task, TaskService} from '../shared/task.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-task-list',
@@ -18,7 +13,8 @@ export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
 
   constructor(
-    public taskService: TaskService
+    public taskService: TaskService,
+    public router: Router
   ) { }
 
   ngOnInit() {
@@ -56,6 +52,10 @@ export class TaskListComponent implements OnInit {
       this.tasks.push(this.newTask);
       this.newTask = null;
     }
+  }
+
+  editTaskClicked(task: Task) {
+    this.router.navigate(['tasks', task.id]);
   }
 
 }

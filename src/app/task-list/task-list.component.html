@@ -6,7 +6,7 @@
         <div class="task-checkbox" (click)="taskClicked(task)">
           <input type="checkbox" [(ngModel)]="task.isDone">
         </div>
-        <div class="task-content">
+        <div class="task-content" (click)="editTaskClicked(task)">
           {{task.content}}
         </div>
       </li>
@@ -20,7 +20,7 @@
         <div class="task-checkbox" (click)="taskClicked(task)">
           <input type="checkbox" [(ngModel)]="task.isDone">
         </div>
-        <div class="task-content">
+        <div class="task-content" (click)="editTaskClicked(task)">
           {{task.content}}
         </div>
       </li>
