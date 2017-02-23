@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <h3>Undone Tasks</h3>
+    <ul class="task-list undone">
+      <li *ngFor="let task of getUndoneTasks()" class="task">
+        <div class="task-checkbox" (click)="taskClicked(task)">
+          <input type="checkbox" [(ngModel)]="task.isDone">
+        </div>
+        <div class="task-content">
+          {{task.content}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h3>Done Tasks</h3>
+    <ul class="task-list done">
+      <div class="small-prompt" *ngIf="!getDoneTasks().length">Nothing done yet!</div>
+      <li *ngFor="let task of getDoneTasks()" class="task">
+        <div class="task-checkbox" (click)="taskClicked(task)">
+          <input type="checkbox" [(ngModel)]="task.isDone">
+        </div>
+        <div class="task-content">
+          {{task.content}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
