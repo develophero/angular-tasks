@@ -11,7 +11,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. 
+
+## Build for production
+
+Run `npm run build` to build the project for production. The build script runs `ng build --prod --aot` for you.
 
 ## Running unit tests
 
@@ -21,6 +25,50 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Configure Firebase
+
+Run the following commands:
+
+```bash
+npm run firebase.login
+npm run firebase.init
+```
+
+If you have have `firebase-tools` installed globally, run:
+
+```bash
+firebase login
+firebase init
+```
+
+### During the `firebase init` stage:
+
+#### Select the Hosting:
+
+? What Firebase CLI features do you want to setup for this folder?
+  ◉ Database: Deploy Firebase Realtime Database Rules
+ ❯◉ Hosting: Configure and deploy Firebase Hosting sites
+
+#### Select your project or create a new one
+
+#### Type in `dist` for your public folder
+
+? What do you want to use as your public directory? (public) dist
+
+#### Configure as a single-page app
+
+? Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y
+
+#### The following files will be generated
+
+* firebase.json 
+* .firebaserc 
+* database.rules.json
+
+## Deploying to Firebase
+
+Run `npm run deploy` to deploy to Firebase. This will run the `build` script followed by `firebase deploy`.
 
 ## Deploying to GitHub Pages
 

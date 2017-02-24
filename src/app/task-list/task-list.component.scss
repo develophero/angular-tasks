@@ -1,0 +1,59 @@
+.task-list {
+  list-style: none;
+
+  &.undone {
+
+  }
+
+  &.done {
+    color: rgba(0,0,0,0.5);
+    font-style: italic;
+  }
+
+  .small-prompt {
+    color: rgba(0,0,0,0.5);
+    padding: 1rem 0;
+  }
+
+  .task {
+    display: flex;
+    align-items: center;
+
+    .task-checkbox {
+      padding: 0.5rem 1rem;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: all 200ms;
+      input {
+        cursor: pointer !important;
+      }
+      &:hover {
+        background: rgba(0,0,0,0.1);
+      }
+      &:active {
+        background: rgba(0,0,0,0.3);
+      }
+    }
+    .task-content {
+      cursor: pointer;
+      transition: color 200ms;
+      &:hover {
+        color: #4285f4;
+      }
+    }
+  }
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  .input-wrapper {
+    flex-grow: 1;
+    padding-right: 1rem;
+  }
+  .new-task-button {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
