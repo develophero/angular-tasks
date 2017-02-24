@@ -28,7 +28,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Configure Firebase
 
-Run the following commands:
+Run the following commands to login and initialize [Firebase](https://firebase.google.com/) in this project: 
 
 ```bash
 npm run firebase.login
@@ -46,19 +46,25 @@ firebase init
 
 #### Select the Hosting:
 
-? What Firebase CLI features do you want to setup for this folder?
-  ◉ Database: Deploy Firebase Realtime Database Rules
- ❯◉ Hosting: Configure and deploy Firebase Hosting sites
+```bash
+? What Firebase CLI features do you want to setup for this folder?  
+  ◉ Database: Deploy Firebase Realtime Database Rules  
+ ❯◉ Hosting: Configure and deploy Firebase Hosting sites  
+```
 
 #### Select your project or create a new one
 
 #### Type in `dist` for your public folder
 
+```bash
 ? What do you want to use as your public directory? (public) dist
+```
 
 #### Configure as a single-page app
 
+```bash
 ? Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y
+```
 
 #### The following files will be generated
 
