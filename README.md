@@ -54,6 +54,16 @@ firebase init
 
 #### Select your project or create a new one
 
+```bash
+? What Firebase project do you want to associate as default? (Use arrow keys)
+```
+
+#### Select Database Rules file (default is fine)
+
+```bash
+? What file should be used for Database Rules? (database.rules.json)
+```
+
 #### Type in `dist` for your public folder
 
 ```bash
